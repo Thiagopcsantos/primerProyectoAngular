@@ -12,6 +12,7 @@ export class TitulosComponent implements OnInit {
 
   correo: string = ""
   password: string = ""
+  digiteNombre: string =""
 
   
   constructor() { }
@@ -25,5 +26,12 @@ export class TitulosComponent implements OnInit {
     console.log(this.password)
   }
 
+  entrar(){
+    console.log(this.digiteNombre)
+  }
+
+  llamarAlert(){
+    alert('Ha hecho dobleclick')
+  }
 
 }
