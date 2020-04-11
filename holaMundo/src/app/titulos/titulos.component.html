@@ -13,7 +13,7 @@
 
 <label for="">Contraseña
 
-    <input type="password" (ngModelChange)="escribirModelo()" [(ngModel)]= "password">
+    <input type="password" (ngModelChange)="escribirModelo()"[(ngModel)]= "password">
 </label>
 
 <button (click)="ingresar()">Iniciar</button>
@@ -24,3 +24,12 @@
 
 <button (dblclick)="entrar()">entrar</button>
 <button (dblclick)="llamarAlert()">preciones dos veces</button>
+
+
+<br/>
+<br/>
+<input type="text" (input)="escribir($event)">
+
+<br/>
+
+<input type="text" (focus)="colorearFundo($event)">
