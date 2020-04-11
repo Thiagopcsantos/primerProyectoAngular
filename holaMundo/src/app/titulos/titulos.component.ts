@@ -33,19 +33,4 @@ export class TitulosComponent implements OnInit {
   llamarAlert(){
     alert('Ha hecho dobleclick')
   }
-
-  escribirModelo(){
-    console.log(this.password)
-  }
-
-
-  escribir(evento){
-    console.log(evento.target.value)
-  }
-
-
-
-  colorearFundo(evento){
-    evento.srcElement.style.background = "blue"
-  }
 }
