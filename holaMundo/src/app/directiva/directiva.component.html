@@ -1,1 +1,9 @@
-<p>directiva works!</p>
+<div *ngIf= "!cargando">
+    <p>Hola Termino de cargar</p>
+</div>
+
+<img *ngIf="cargando" src="https://i.pinimg.com/originals/77/97/81/779781883952778b25974baa3cf7679c.gif" alt="">
+
+<br/>
+
+<button (click)="alternar()">Alternar</button>
