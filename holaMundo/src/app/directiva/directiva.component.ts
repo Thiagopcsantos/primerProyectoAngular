@@ -16,6 +16,8 @@ export class DirectivaComponent implements OnInit {
 
 nombres:Array<string> = ["Maria " , "Ana" , "Juan" , "Pedro"] 
 
+pestana: string=''
+
 productos: Array<Productos> = [
   {
     nombre : 'Arroz',
@@ -53,5 +55,9 @@ productos: Array<Productos> = [
   this.cargando = !this.cargando;
 }
 
+cambiarPestana(pestana:string) {
+  this.pestana = pestana;
+}
+  
 
 }

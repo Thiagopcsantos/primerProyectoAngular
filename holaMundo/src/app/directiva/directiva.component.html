@@ -8,7 +8,7 @@
 
 <button (click)="alternar()">Alternar</button> -->
 
-<div *ngFor="let nombre of nombres">
+<!-- <div *ngFor="let nombre of nombres">
     <p> Hola mi nombre es : {{nombre}}</p>
   </div>
 
@@ -17,4 +17,19 @@
     <p>Su stock es: {{producto.stock}}</p>
     <p>Fabricante: {{producto.fabricante}}</p>
     <p>vencimiento: {{producto.fechaVence}}</p>
-  </div>
+  </div> -->
+
+<div class="but" [ngSwitch]="pestana"> 
+    <button (click)="cambiarPestana('perfil')">Perfil</button>
+    <button (click)="cambiarPestana('puntos')">Puntos</button>
+    <button (click)="cambiarPestana('info')">Info</button>
+
+    <div class="butContenido">
+        <p *ngSwitchCase="'perfil'">Este es el perfil</p>
+        <p *ngSwitchCase="'puntos'">Este son los puntos</p>
+        <p *ngSwitchCase="'info'">Esta es la info</p>
+        <p *ngSwitchDefault>Seleccione una pestaña</p>
+
+    </div>
+</div>
+
