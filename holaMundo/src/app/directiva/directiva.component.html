@@ -1,4 +1,4 @@
-<div *ngIf= "!cargando">
+<!-- <div *ngIf= "!cargando">
     <p>Hola Termino de cargar</p>
 </div>
 
@@ -6,4 +6,15 @@
 
 <br/>
 
-<button (click)="alternar()">Alternar</button>
+<button (click)="alternar()">Alternar</button> -->
+
+<div *ngFor="let nombre of nombres">
+    <p> Hola mi nombre es : {{nombre}}</p>
+  </div>
+
+  <div *ngFor= " let producto of productos" class="producto">
+    <p>El producto es: {{producto.nombre}}</p>
+    <p>Su stock es: {{producto.stock}}</p>
+    <p>Fabricante: {{producto.fabricante}}</p>
+    <p>vencimiento: {{producto.fechaVence}}</p>
+  </div>
