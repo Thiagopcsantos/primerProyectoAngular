@@ -19,7 +19,7 @@
     <p>vencimiento: {{producto.fechaVence}}</p>
   </div> -->
 
-<div class="but" [ngSwitch]="pestana"> 
+<!-- <div class="but" [ngSwitch]="pestana"> 
     <button (click)="cambiarPestana('perfil')">Perfil</button>
     <button (click)="cambiarPestana('puntos')">Puntos</button>
     <button (click)="cambiarPestana('info')">Info</button>
@@ -31,5 +31,17 @@
         <p *ngSwitchDefault>Seleccione una pestaña</p>
 
     </div>
+</div> -->
+
+<button (click)="alternarFondo()">Alternar</button>
+
+<div [ngClass]="{ 'cuadrado': mostrarCuadrado }">
+  <p>Esse deveria aparecer com uma cor verde</p>
 </div>
 
+<div *ngFor= " let producto of productos" class="producto">
+  <p [ngClass]="{ 'textoImportante': producto.esImportante }">El producto es: {{producto.nombre}}</p>
+  <p>Su stock es: {{producto.stock}}</p>
+  <p>Fabricante: {{producto.fabricante}}</p>
+  <p>vencimiento: {{producto.fechaVence}}</p>
+</div>
